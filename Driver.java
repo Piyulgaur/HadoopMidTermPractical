@@ -13,14 +13,14 @@ import org.apache.hadoop.mapreduce.Job;
 import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 
-public class Driver {
+public class FreqDriver {
 	public static void main(String[] args) throws IOException, ClassNotFoundException, InterruptedException {
 
 		Job j = new Job();
 		j.setJobName("freq counter");
-		j.setJarByClass(Driver.class);
-		j.setMapperClass(MyMapper.class);
-		j.setReducerClass(MyReducer.class);
+		j.setJarByClass(FreqDriver.class);
+		j.setMapperClass(FreqMapper.class);
+		j.setReducerClass(FreqReducer.class);
 		j.setOutputKeyClass(Text.class);
 		j.setOutputValueClass(IntWritable.class);
 
