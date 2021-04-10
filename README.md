@@ -1,1 +1,1 @@
-# HadoopMidTermPractical
+# Hadoop Practical
